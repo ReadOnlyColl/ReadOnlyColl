@@ -1,0 +1,50 @@
+plugins {
+    id 'java-library'
+    id 'checkstyle'
+    id 'org.ec4j.editorconfig' version '0.0.3'
+    id "com.github.spotbugs" version "5.0.13"
+}
+
+sourceCompatibility = '17'
+compileJava.options.encoding = 'UTF-8'
+group = 'com.esheich.readonlycollections'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    spotbugsPlugins 'com.h3xstream.findsecbugs:findsecbugs-plugin:1.12.0'
+    implementation 'com.google.guava:guava:30.1.1-jre'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.2'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+editorconfig {
+    excludes = ["build"]
+}
+check.dependsOn editorconfigCheck
+
+checkstyle {
+    configFile = file("${project.rootDir}/config/checkstyle/checkstyle.xml")
+    configProperties = ["suppressionFile": "${project.rootDir}/config/checkstyle/checkstyle-suppressions.xml"]
+    toolVersion = "10.3"
+    ignoreFailures = true
+    maxErrors = 0
+    maxWarnings = 0
+}
+
+spotbugs {
+    toolVersion = '4.7.2'
+    showStackTraces = true
+    ignoreFailures = true
+    reportLevel = 'high'
+}
