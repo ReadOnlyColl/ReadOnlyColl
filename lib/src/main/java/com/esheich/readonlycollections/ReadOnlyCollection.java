@@ -1,5 +1,7 @@
 package com.esheich.readonlycollections;
 
+import java.util.Collection;
+
 public interface ReadOnlyCollection<T> extends Iterable<T>, Streamable<T> {
 
     int size();
@@ -7,4 +9,6 @@ public interface ReadOnlyCollection<T> extends Iterable<T>, Streamable<T> {
     boolean isEmpty();
 
     boolean contains(T value);
+
+    Collection<T> toRuntimeReadOnly();
 }

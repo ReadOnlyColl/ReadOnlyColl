@@ -1,10 +1,14 @@
 package com.esheich.readonlycollections;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvSource;
@@ -55,5 +59,17 @@ public class GenericReadOnlyCollectionTests {
         boolean doesContain = sut.contains(givenValue);
 
         assertThat(doesContain).isEqualTo(expectedContains);
+    }
+
+    @Test
+    void convert_to_runtime_readonly_collection() {
+
+        var source = new ArrayList<String>();
+        var sut = new GenericReadOnlyCollection<String>(source);
+
+        Collection<String> actualRuntimeReadOnly = sut.toRuntimeReadOnly();
+
+        assertThatThrownBy(() -> actualRuntimeReadOnly.add("dummy"))
+            .isExactlyInstanceOf(UnsupportedOperationException.class);
     }
 }

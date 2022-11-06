@@ -1,14 +1,15 @@
 package com.esheich.readonlycollections;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Hashtable;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
-import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.Test;
 
 public class GenericReadOnlyMapTests {
@@ -142,5 +143,23 @@ public class GenericReadOnlyMapTests {
 
         // Assert
         assertThat(actualValue).isEmpty();
+    }
+
+    @Test
+    void convert_to_runtime_readonly_map() {
+
+        // Arrange
+        var source = new Hashtable<String, String>();
+        source.put("a", "a");
+        source.put("b", "b");
+
+        var sut = new GenericReadOnlyMap<String, String>(source);
+
+        // Act
+        Map<String, String> actualRuntimeReadOnly = sut.toRuntimeReadOnly();
+
+        // Assert
+        assertThatThrownBy(() -> actualRuntimeReadOnly.put("a", "a"))
+            .isExactlyInstanceOf(UnsupportedOperationException.class);
     }
 }

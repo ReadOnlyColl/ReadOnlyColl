@@ -1,6 +1,7 @@
 package com.esheich.readonlycollections;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.stream.Stream;
 
@@ -47,5 +48,11 @@ class GenericReadOnlyCollection<T> implements ReadOnlyCollection<T> {
     public Stream<T> parallelStream() {
 
         return this.source.parallelStream();
+    }
+
+    @Override
+    public Collection<T> toRuntimeReadOnly() {
+
+        return Collections.unmodifiableCollection(this.source);
     }
 }

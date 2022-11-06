@@ -1,5 +1,6 @@
 package com.esheich.readonlycollections;
 
+import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
@@ -48,5 +49,11 @@ class GenericReadOnlyMap<K, V> implements ReadOnlyMap<K, V> {
 
             return Optional.empty();
         }
+    }
+
+    @Override
+    public Map<K, V> toRuntimeReadOnly() {
+
+        return Collections.unmodifiableMap(source);
     }
 }

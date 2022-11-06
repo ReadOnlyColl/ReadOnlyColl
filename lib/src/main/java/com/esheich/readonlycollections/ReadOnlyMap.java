@@ -1,5 +1,6 @@
 package com.esheich.readonlycollections;
 
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
@@ -15,4 +16,6 @@ public interface ReadOnlyMap<K, V> {
     V getValue(K key);
 
     Optional<V> tryGetValue(K key);
+
+    Map<K, V> toRuntimeReadOnly();
 }
