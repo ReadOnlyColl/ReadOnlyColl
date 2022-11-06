@@ -1,4 +1,5 @@
 package com.esheich.readonlycollections;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Hashtable;
