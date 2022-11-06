@@ -6,7 +6,7 @@ import java.util.Hashtable;
 
 import org.junit.jupiter.api.Test;
 
-public class ReadOnlyCollectionsTests {
+public class ReadOnlyTests {
 
     @Test
     void to_readonly_map() {
@@ -15,7 +15,7 @@ public class ReadOnlyCollectionsTests {
         var source = new Hashtable<String, String>();
 
         // Act
-        ReadOnlyMap<String, String> actualMap = ReadOnlyCollections.to(source);
+        ReadOnlyMap<String, String> actualMap = ReadOnly.to(source);
 
         // Assert
         assertThat(actualMap).isInstanceOf(GenericReadOnlyMap.class);
