@@ -2,11 +2,13 @@ package com.esheich.readonlycollections;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Hashtable;
 import java.util.Optional;
 import java.util.Set;
 
+import org.assertj.core.util.Arrays;
 import org.junit.jupiter.api.Test;
 
 public class GenericReadOnlyMapTests {
@@ -46,7 +48,10 @@ public class GenericReadOnlyMapTests {
         ReadOnlyCollection<String> actualValues = sut.values();
 
         // Assert
-        assertThat(actualValues).isEqualTo(expectedValues);
+        var asList = new ArrayList<String>();
+        actualValues.iterator().forEachRemaining(asList::add);
+
+        assertThat(asList).asList().containsExactlyElementsOf(expectedValues);
     }
 
     @Test
