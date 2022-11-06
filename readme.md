@@ -6,6 +6,6 @@ Java 언어는 컴파일 시점에서 평가되는 readonly 컬렉션류들을 �
 ```java
 HashTable<String, String> source = new HashTable<String, String>();
 
-ReadOnlyMap<String, String> readonlySource = ReadOnlyCollections.to(source);
+ReadOnlyMap<String, String> readonlySource = ReadOnly.to(source);
 ```
 
