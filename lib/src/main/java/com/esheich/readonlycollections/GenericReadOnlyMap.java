@@ -1,6 +1,5 @@
 package com.esheich.readonlycollections;
 
-import java.util.Collection;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
@@ -21,9 +20,9 @@ class GenericReadOnlyMap<K, V> implements ReadOnlyMap<K, V> {
     }
 
     @Override
-    public Collection<V> values() {
+    public ReadOnlyCollection<V> values() {
 
-        return this.source.values();
+        return ReadOnly.to(this.source.values());
     }
 
     @Override

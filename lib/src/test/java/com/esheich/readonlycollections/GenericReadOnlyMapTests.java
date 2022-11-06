@@ -43,7 +43,7 @@ public class GenericReadOnlyMapTests {
         var sut = new GenericReadOnlyMap<String, String>(source);
 
         // Act
-        Collection<String> actualValues = sut.values();
+        ReadOnlyCollection<String> actualValues = sut.values();
 
         // Assert
         assertThat(actualValues).isEqualTo(expectedValues);
