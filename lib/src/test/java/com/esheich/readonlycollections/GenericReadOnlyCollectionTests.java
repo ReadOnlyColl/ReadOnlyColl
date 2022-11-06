@@ -52,8 +52,8 @@ public class GenericReadOnlyCollectionTests {
         List<String> sourceAsList = Arrays.asList(source);
         var sut = new GenericReadOnlyCollection<String>(sourceAsList);
 
-        boolean doesContains = sut.contains(givenValue);
+        boolean doesContain = sut.contains(givenValue);
 
-        assertThat(doesContains).isEqualTo(expectedContains);
+        assertThat(doesContain).isEqualTo(expectedContains);
     }
 }
