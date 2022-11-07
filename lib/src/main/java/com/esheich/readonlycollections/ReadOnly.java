@@ -1,6 +1,7 @@
 package com.esheich.readonlycollections;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 public class ReadOnly {
@@ -13,5 +14,10 @@ public class ReadOnly {
     public static <T> ReadOnlyCollection<T> to(Collection<T> source) {
 
         return new GenericReadOnlyCollection<>(source);
+    }
+
+    public static <T> ReadOnlyList<T> to(List<T> source) {
+
+        return new GenericReadOnlyList<>(source);
     }
 }
