@@ -6,6 +6,7 @@ Java 언어는 컴파일 시점에서 평가되는 readonly 컬렉션류들을 �
 
 # Supported Collections
 * [ReadOnlyCollection](lib/src/main/java/com/esheich/readonlycollections/ReadOnlyCollection.java)
+* [ReadOnlyList](lib/src/main/java/com/esheich/readonlycollections/ReadOnlyMap.java)
 * [ReadOnlyMap](lib/src/main/java/com/esheich/readonlycollections/ReadOnlyMap.java)
 * (Coming soon...)
 
