@@ -5,9 +5,9 @@ Java 언어는 컴파일 시점에서 평가되는 readonly 컬렉션류들을 �
 이 프로젝트는 컴파일 시점에서 평가되는 기본적인 readonly 컬렉션류들을 제공합니다.
 
 # Supported Collections
-* [ReadOnlyCollection](lib/src/main/java/com/esheich/readonlycollections/ReadOnlyCollection.java)
-* [ReadOnlyList](lib/src/main/java/com/esheich/readonlycollections/ReadOnlyMap.java)
-* [ReadOnlyMap](lib/src/main/java/com/esheich/readonlycollections/ReadOnlyMap.java)
+* [ReadOnlyCollection](lib/src/main/java/readonlycollections/ReadOnlyCollection.java)
+* [ReadOnlyList](lib/src/main/java/readonlycollections/ReadOnlyList.java)
+* [ReadOnlyMap](lib/src/main/java/readonlycollections/ReadOnlyMap.java)
 * (Coming soon...)
 
 # Quick Start
