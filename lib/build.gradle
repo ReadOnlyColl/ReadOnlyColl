@@ -8,6 +8,7 @@ plugins {
 sourceCompatibility = '17'
 compileJava.options.encoding = 'UTF-8'
 group = 'io.github.readonlycollections'
+version = artifactVersion
 
 repositories {
     mavenCentral()
@@ -48,4 +49,17 @@ spotbugs {
     showStackTraces = true
     ignoreFailures = true
     reportLevel = 'high'
+}
+
+jar {
+    manifest {
+        attributes(
+            'Specification-Title': artifactName,
+            'Specification-Version': artifactVersion,
+            'Specification-Vendor': 'io.github.readonlycollections',
+            'Implementation-Title': artifactName,
+            'Implementation-Version': artifactVersion,
+            'Implementation-Vendor': 'io.github.readonlycollections'
+        )
+    }
 }
