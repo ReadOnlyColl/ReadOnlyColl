@@ -7,7 +7,7 @@ plugins {
 
 sourceCompatibility = '17'
 compileJava.options.encoding = 'UTF-8'
-group = 'io.github.readonlycollections'
+group = 'com.github.java-readonlycollections'
 version = artifactVersion
 
 repositories {
