@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 
 class GenericReadOnlyCollection<T> implements ReadOnlyCollection<T> {
 
-    private final Collection<T> source;
+    protected final Collection<T> source;
 
     public GenericReadOnlyCollection(Collection<T> source) {
 
