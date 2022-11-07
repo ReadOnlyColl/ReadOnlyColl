@@ -7,7 +7,7 @@ plugins {
 
 sourceCompatibility = '17'
 compileJava.options.encoding = 'UTF-8'
-group = 'com.esheich.readonlycollections'
+group = 'io.github.readonlycollections'
 
 repositories {
     mavenCentral()

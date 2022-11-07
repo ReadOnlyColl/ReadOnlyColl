@@ -1,4 +1,4 @@
-package com.esheich.readonlycollections;
+package readonlycollections;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -13,7 +13,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.converter.ConvertWith;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import com.esheich.readonlycollections.testtool.StringArrayConverter;
+import readonlycollections.GenericReadOnlyCollection;
+import readonlycollections.testtool.StringArrayConverter;
 
 public class GenericReadOnlyCollectionTests {
 

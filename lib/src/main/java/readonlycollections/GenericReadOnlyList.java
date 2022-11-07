@@ -1,4 +1,4 @@
-package com.esheich.readonlycollections;
+package readonlycollections;
 
 import java.util.Collections;
 import java.util.List;

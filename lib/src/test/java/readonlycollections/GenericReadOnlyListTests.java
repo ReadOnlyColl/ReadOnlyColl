@@ -1,4 +1,4 @@
-package com.esheich.readonlycollections;
+package readonlycollections;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -7,6 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
+
+import readonlycollections.GenericReadOnlyList;
 
 public class GenericReadOnlyListTests {
 

@@ -1,4 +1,4 @@
-package com.esheich.readonlycollections.testtool;
+package readonlycollections.testtool;
 
 import org.junit.jupiter.params.converter.ArgumentConversionException;
 import org.junit.jupiter.params.converter.SimpleArgumentConverter;

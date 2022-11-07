@@ -1,4 +1,4 @@
-package com.esheich.readonlycollections;
+package readonlycollections;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -6,6 +6,12 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 
 import org.junit.jupiter.api.Test;
+
+import readonlycollections.GenericReadOnlyCollection;
+import readonlycollections.GenericReadOnlyMap;
+import readonlycollections.ReadOnly;
+import readonlycollections.ReadOnlyCollection;
+import readonlycollections.ReadOnlyMap;
 
 public class ReadOnlyTests {
 
