@@ -12,9 +12,6 @@ import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
-import readonlycollections.GenericReadOnlyMap;
-import readonlycollections.ReadOnlyCollection;
-
 public class GenericReadOnlyMapTests {
 
     @Test

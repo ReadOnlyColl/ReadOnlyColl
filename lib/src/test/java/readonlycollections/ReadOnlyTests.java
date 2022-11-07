@@ -7,12 +7,6 @@ import java.util.Hashtable;
 
 import org.junit.jupiter.api.Test;
 
-import readonlycollections.GenericReadOnlyCollection;
-import readonlycollections.GenericReadOnlyMap;
-import readonlycollections.ReadOnly;
-import readonlycollections.ReadOnlyCollection;
-import readonlycollections.ReadOnlyMap;
-
 public class ReadOnlyTests {
 
     @Test
