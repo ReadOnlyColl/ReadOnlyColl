@@ -6,17 +6,17 @@ import java.util.Map;
 
 public class ReadOnly {
 
-    public static <K, V> ReadOnlyMap<K, V> to(Map<K, V> source) {
+    public static <K, V> ReadOnlyMap<K, V> of(Map<K, V> source) {
 
         return new GenericReadOnlyMap<>(source);
     }
 
-    public static <T> ReadOnlyCollection<T> to(Collection<T> source) {
+    public static <T> ReadOnlyCollection<T> of(Collection<T> source) {
 
         return new GenericReadOnlyCollection<>(source);
     }
 
-    public static <T> ReadOnlyList<T> to(List<T> source) {
+    public static <T> ReadOnlyList<T> of(List<T> source) {
 
         return new GenericReadOnlyList<>(source);
     }

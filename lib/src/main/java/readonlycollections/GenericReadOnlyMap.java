@@ -23,7 +23,7 @@ class GenericReadOnlyMap<K, V> implements ReadOnlyMap<K, V> {
     @Override
     public ReadOnlyCollection<V> values() {
 
-        return ReadOnly.to(this.source.values());
+        return ReadOnly.of(this.source.values());
     }
 
     @Override

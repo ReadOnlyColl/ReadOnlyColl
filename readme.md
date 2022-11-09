@@ -15,6 +15,6 @@ This project provides it.
 
 var source = new ArrayList<String>();
 
-ReadOnlyList<String> readonlySource = ReadOnly.to(source);
+ReadOnlyList<String> readonlySource = ReadOnly.of(source);
 
 ```
