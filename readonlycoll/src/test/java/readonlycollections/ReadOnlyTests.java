@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 public class ReadOnlyTests {
 
     @Test
-    void to_readonly_map() {
+    void convert_to_readonly_of_map() {
 
         // Arrange
         var source = new Hashtable<String, String>();
@@ -23,20 +23,20 @@ public class ReadOnlyTests {
     }
 
     @Test
-    void to_readonly_collection() {
+    void convert_to_readonly_of_collection() {
 
         // Arrange
         var source = new ArrayList<String>();
 
         // Act
-        ReadOnlyCollection<String> actualMap = ReadOnly.of(source);
+        ReadOnlyCollection<String> actualCollection = ReadOnly.of(source);
 
         // Assert
-        assertThat(actualMap).isInstanceOf(GeneralReadOnlyCollection.class);
+        assertThat(actualCollection).isInstanceOf(GeneralReadOnlyCollection.class);
     }
 
     @Test
-    void to_readonly_list() {
+    void convert_to_readonly_of_list() {
 
         // Arrange
         var source = new ArrayList<String>();
