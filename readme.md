@@ -1,4 +1,4 @@
-[![Continous Integration](https://github.com/sang-hyeon/Java-ReadonlyCollections/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/sang-hyeon/Java-ReadonlyCollections/actions/workflows/ci.yml)
+[![Continous Integration](https://github.com/sang-hyeon/Java-ReadOnlyCollections/actions/workflows/continous-integration.yml/badge.svg)](https://github.com/sang-hyeon/Java-ReadOnlyCollections/actions/workflows/continous-integration.yml)
 
 # ReadonlyCollections
 Java 언어는 컴파일 시점에서 평가되는 readonly 컬렉션류들을 지원하지 않습니다. <br>
