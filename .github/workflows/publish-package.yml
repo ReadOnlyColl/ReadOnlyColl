@@ -20,7 +20,7 @@ jobs:
     - name: Publish package
       run: gradle publish --info
       env:
-        MAVEN_USERNAME: ${{ secrets.MAVEN_USER }}
+        MAVEN_USER: ${{ secrets.MAVEN_USER }}
         MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}
         SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
         SIGNING_PASSWORD: ${{ secrets.SIGNING_PASSWORD }}
