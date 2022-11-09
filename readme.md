@@ -5,9 +5,9 @@ Java (J2SE) does not support read-only collections that are evaluated at compile
 This project provides it.
 
 ## Supported Collections
-* [ReadOnlyCollection](lib/src/main/java/readonlycollections/ReadOnlyCollection.java)
-* [ReadOnlyList](lib/src/main/java/readonlycollections/ReadOnlyList.java)
-* [ReadOnlyMap](lib/src/main/java/readonlycollections/ReadOnlyMap.java)
+* [ReadOnlyCollection](readonlycoll/src/main/java/readonlycollections/ReadOnlyCollection.java)
+* [ReadOnlyList](readonlycoll/src/main/java/readonlycollections/ReadOnlyList.java)
+* [ReadOnlyMap](readonlycoll/src/main/java/readonlycollections/ReadOnlyMap.java)
 * (Coming soon...)
 
 ## Quick Start
