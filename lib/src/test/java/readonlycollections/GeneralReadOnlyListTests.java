@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-public class GenericReadOnlyListTests {
+public class GeneralReadOnlyListTests {
 
     @Test
     void get_a_value_by_given_index() {
@@ -19,7 +19,7 @@ public class GenericReadOnlyListTests {
         source.add("a");
         source.add(givenIndex, expectedValue);
 
-        var sut = new GenericReadOnlyList<String>(source);
+        var sut = new GeneralReadOnlyList<String>(source);
 
         String actualValue = sut.get(givenIndex);
 
@@ -31,7 +31,7 @@ public class GenericReadOnlyListTests {
 
         var source = new ArrayList<String>();
         source.add("a");
-        var sut = new GenericReadOnlyList<String>(source);
+        var sut = new GeneralReadOnlyList<String>(source);
 
         List<String> actualRuntimeReadOnly = sut.toRuntimeReadOnly();
 

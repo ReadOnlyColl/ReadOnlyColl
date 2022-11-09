@@ -19,7 +19,7 @@ public class ReadOnlyTests {
         ReadOnlyMap<String, String> actualMap = ReadOnly.of(source);
 
         // Assert
-        assertThat(actualMap).isInstanceOf(GenericReadOnlyMap.class);
+        assertThat(actualMap).isInstanceOf(GeneralReadOnlyMap.class);
     }
 
     @Test
@@ -32,6 +32,6 @@ public class ReadOnlyTests {
         ReadOnlyCollection<String> actualMap = ReadOnly.of(source);
 
         // Assert
-        assertThat(actualMap).isInstanceOf(GenericReadOnlyCollection.class);
+        assertThat(actualMap).isInstanceOf(GeneralReadOnlyCollection.class);
     }
 }

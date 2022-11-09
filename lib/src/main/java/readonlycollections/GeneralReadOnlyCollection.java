@@ -5,11 +5,11 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.stream.Stream;
 
-class GenericReadOnlyCollection<T> implements ReadOnlyCollection<T> {
+class GeneralReadOnlyCollection<T> implements ReadOnlyCollection<T> {
 
     protected final Collection<T> source;
 
-    public GenericReadOnlyCollection(Collection<T> source) {
+    public GeneralReadOnlyCollection(Collection<T> source) {
 
         this.source = source;
     }
