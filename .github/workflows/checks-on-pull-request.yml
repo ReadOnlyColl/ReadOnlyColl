@@ -37,16 +37,16 @@ jobs:
       if: always()
       with:
         reports: |
-          ${{ env.LIB_ROOT_DIR }}/*/build/reports/checkstyle/*.xml
+          ${{ env.LIB_ROOT_DIR }}/build/reports/checkstyle/*.xml
 
     - name: Publish SpotBugs Report
       uses: jwgmeligmeyling/spotbugs-github-action@master
       if: always()
       with:
-        path: '${{ env.LIB_ROOT_DIR }}/*/build/reports/spotbugs/*.xml'
+        path: '${{ env.LIB_ROOT_DIR }}/build/reports/spotbugs/*.xml'
         
     - name: Publish Unit Test Results
       uses: EnricoMi/publish-unit-test-result-action@v2
       if: always()
       with:
-        junit_files: ${{ env.LIB_ROOT_DIR }}/*/build/test-results/**/*.xml
+        junit_files: ${{ env.LIB_ROOT_DIR }}/build/test-results/**/*.xml
