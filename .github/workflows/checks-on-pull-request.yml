@@ -26,3 +26,22 @@ jobs:
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
         arguments: build --info
+        
+    - name: Publish Checkstyle Report
+      uses: Juuxel/publish-checkstyle-report@v1
+      if: always()
+      with:
+        reports: |
+          ${{ env.ROOT_DIR }}/projects/*/build/reports/checkstyle/*.xml
+
+    - name: Publish SpotBugs Report
+      uses: jwgmeligmeyling/spotbugs-github-action@master
+      if: always()
+      with:
+        path: '${{ env.ROOT_DIR }}/projects/*/build/reports/spotbugs/*.xml'
+        
+    - name: Publish Unit Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      if: always()
+      with:
+        junit_files: ${{ env.ROOT_DIR }}/projects/*/build/test-results/**/*.xml
