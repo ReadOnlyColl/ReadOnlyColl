@@ -6,6 +6,11 @@ on:
 
 permissions:
   contents: read
+  checks: write
+  pull-requests: write
+  
+env:
+  LIB_ROOT_DIR: readonlycoll
 
 jobs:
   build:
@@ -26,3 +31,22 @@ jobs:
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
         arguments: build --info
+        
+    - name: Publish Checkstyle Report
+      uses: Juuxel/publish-checkstyle-report@v1
+      if: always()
+      with:
+        reports: |
+          ${{ env.LIB_ROOT_DIR }}/build/reports/checkstyle/*.xml
+
+    - name: Publish SpotBugs Report
+      uses: jwgmeligmeyling/spotbugs-github-action@master
+      if: always()
+      with:
+        path: '${{ env.LIB_ROOT_DIR }}/build/reports/spotbugs/*.xml'
+        
+    - name: Publish Unit Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      if: always()
+      with:
+        junit_files: ${{ env.LIB_ROOT_DIR }}/build/test-results/**/*.xml
