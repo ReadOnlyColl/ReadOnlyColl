@@ -57,6 +57,13 @@ spotbugs {
     reportLevel = 'high'
 }
 
+tasks.withType(com.github.spotbugs.snom.SpotBugsTask) {
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+    }
+}
+
 jar {
     manifest {
         attributes(
