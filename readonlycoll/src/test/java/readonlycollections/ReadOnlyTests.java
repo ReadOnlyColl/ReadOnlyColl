@@ -34,4 +34,17 @@ public class ReadOnlyTests {
         // Assert
         assertThat(actualMap).isInstanceOf(GeneralReadOnlyCollection.class);
     }
+
+    @Test
+    void to_readonly_list() {
+
+        // Arrange
+        var source = new ArrayList<String>();
+
+        // Act
+        ReadOnlyList<String> actualList = ReadOnly.of(source);
+
+        // Assert
+        assertThat(actualList).isInstanceOf(GeneralReadOnlyList.class);
+    }
 }
