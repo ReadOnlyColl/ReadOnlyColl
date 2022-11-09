@@ -3,10 +3,10 @@ package readonlycollections;
 import java.util.Collections;
 import java.util.List;
 
-class GenericReadOnlyList<T>
-    extends GenericReadOnlyCollection<T> implements ReadOnlyList<T> {
+class GeneralReadOnlyList<T>
+    extends GeneralReadOnlyCollection<T> implements ReadOnlyList<T> {
 
-    public GenericReadOnlyList(List<T> source) {
+    public GeneralReadOnlyList(List<T> source) {
 
         super(source);
     }

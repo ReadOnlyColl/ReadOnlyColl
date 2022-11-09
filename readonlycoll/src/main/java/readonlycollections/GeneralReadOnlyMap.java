@@ -5,11 +5,11 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
-class GenericReadOnlyMap<K, V> implements ReadOnlyMap<K, V> {
+class GeneralReadOnlyMap<K, V> implements ReadOnlyMap<K, V> {
 
     private final Map<K, V> source;
 
-    public GenericReadOnlyMap(Map<K, V> source) {
+    public GeneralReadOnlyMap(Map<K, V> source) {
 
         this.source = source;
     }
@@ -23,7 +23,7 @@ class GenericReadOnlyMap<K, V> implements ReadOnlyMap<K, V> {
     @Override
     public ReadOnlyCollection<V> values() {
 
-        return ReadOnly.to(this.source.values());
+        return ReadOnly.of(this.source.values());
     }
 
     @Override

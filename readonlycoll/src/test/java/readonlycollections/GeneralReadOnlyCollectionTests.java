@@ -15,7 +15,7 @@ import org.junit.jupiter.params.provider.CsvSource;
 
 import readonlycollections.testtool.StringArrayConverter;
 
-public class GenericReadOnlyCollectionTests {
+public class GeneralReadOnlyCollectionTests {
 
     @ParameterizedTest
     @CsvSource(value = {"'a,b,c', 3", "'a,b', 2", "'a', 1", ", 0"})
@@ -24,7 +24,7 @@ public class GenericReadOnlyCollectionTests {
         int expectedSize) {
 
         List<String> sourceAsList = Arrays.asList(source);
-        var sut = new GenericReadOnlyCollection<String>(sourceAsList);
+        var sut = new GeneralReadOnlyCollection<String>(sourceAsList);
 
         int actualSize = sut.size();
 
@@ -38,7 +38,7 @@ public class GenericReadOnlyCollectionTests {
         boolean expectedIsEmpty) {
 
         List<String> sourceAsList = Arrays.asList(source);
-        var sut = new GenericReadOnlyCollection<String>(sourceAsList);
+        var sut = new GeneralReadOnlyCollection<String>(sourceAsList);
 
         boolean actualIsEmpty = sut.isEmpty();
 
@@ -54,7 +54,7 @@ public class GenericReadOnlyCollectionTests {
         boolean expectedContains) {
 
         List<String> sourceAsList = Arrays.asList(source);
-        var sut = new GenericReadOnlyCollection<String>(sourceAsList);
+        var sut = new GeneralReadOnlyCollection<String>(sourceAsList);
 
         boolean doesContain = sut.contains(givenValue);
 
@@ -65,7 +65,7 @@ public class GenericReadOnlyCollectionTests {
     void convert_to_runtime_readonly_collection() {
 
         var source = new ArrayList<String>();
-        var sut = new GenericReadOnlyCollection<String>(source);
+        var sut = new GeneralReadOnlyCollection<String>(source);
 
         Collection<String> actualRuntimeReadOnly = sut.toRuntimeReadOnly();
 

@@ -12,7 +12,7 @@ import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
-public class GenericReadOnlyMapTests {
+public class GeneralReadOnlyMapTests {
 
     @Test
     void get_keys() {
@@ -24,7 +24,7 @@ public class GenericReadOnlyMapTests {
         source.put("c", "c");
 
         Set<String> expectedKeys = source.keySet();
-        var sut = new GenericReadOnlyMap<String, String>(source);
+        var sut = new GeneralReadOnlyMap<String, String>(source);
 
         // Act
         Set<String> actualKeys = sut.keySet();
@@ -43,7 +43,7 @@ public class GenericReadOnlyMapTests {
         source.put("c", "c");
 
         Collection<String> expectedValues = source.values();
-        var sut = new GenericReadOnlyMap<String, String>(source);
+        var sut = new GeneralReadOnlyMap<String, String>(source);
 
         // Act
         ReadOnlyCollection<String> actualValues = sut.values();
@@ -65,7 +65,7 @@ public class GenericReadOnlyMapTests {
         source.put("b", "b");
         source.put("c", "c");
 
-        var sut = new GenericReadOnlyMap<String, String>(source);
+        var sut = new GeneralReadOnlyMap<String, String>(source);
 
         // Act
         var doesContain = sut.containsKey(givenKey);
@@ -79,7 +79,7 @@ public class GenericReadOnlyMapTests {
 
         // Arrange
         var source = new Hashtable<String, String>();
-        var sut = new GenericReadOnlyMap<String, String>(source);
+        var sut = new GeneralReadOnlyMap<String, String>(source);
 
         // Act
         var doesContain = sut.containsKey("a");
@@ -99,7 +99,7 @@ public class GenericReadOnlyMapTests {
         source.put("b", "b");
         source.put(givenKey, expectedValue);
 
-        var sut = new GenericReadOnlyMap<String, String>(source);
+        var sut = new GeneralReadOnlyMap<String, String>(source);
 
         // Act
         var actualValue = sut.getValue(givenKey);
@@ -119,7 +119,7 @@ public class GenericReadOnlyMapTests {
         source.put("b", "b");
         source.put(givenKey, expectedValue);
 
-        var sut = new GenericReadOnlyMap<String, String>(source);
+        var sut = new GeneralReadOnlyMap<String, String>(source);
 
         // Act
         Optional<String> actualValue = sut.tryGetValue(givenKey);
@@ -136,7 +136,7 @@ public class GenericReadOnlyMapTests {
         source.put("a", "a");
         source.put("b", "b");
 
-        var sut = new GenericReadOnlyMap<String, String>(source);
+        var sut = new GeneralReadOnlyMap<String, String>(source);
 
         // Act
         Optional<String> actualValue = sut.tryGetValue("kk");
@@ -153,7 +153,7 @@ public class GenericReadOnlyMapTests {
         source.put("a", "a");
         source.put("b", "b");
 
-        var sut = new GenericReadOnlyMap<String, String>(source);
+        var sut = new GeneralReadOnlyMap<String, String>(source);
 
         // Act
         Map<String, String> actualRuntimeReadOnly = sut.toRuntimeReadOnly();

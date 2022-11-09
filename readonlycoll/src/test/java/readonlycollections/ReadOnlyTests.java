@@ -16,10 +16,10 @@ public class ReadOnlyTests {
         var source = new Hashtable<String, String>();
 
         // Act
-        ReadOnlyMap<String, String> actualMap = ReadOnly.to(source);
+        ReadOnlyMap<String, String> actualMap = ReadOnly.of(source);
 
         // Assert
-        assertThat(actualMap).isInstanceOf(GenericReadOnlyMap.class);
+        assertThat(actualMap).isInstanceOf(GeneralReadOnlyMap.class);
     }
 
     @Test
@@ -29,9 +29,9 @@ public class ReadOnlyTests {
         var source = new ArrayList<String>();
 
         // Act
-        ReadOnlyCollection<String> actualMap = ReadOnly.to(source);
+        ReadOnlyCollection<String> actualMap = ReadOnly.of(source);
 
         // Assert
-        assertThat(actualMap).isInstanceOf(GenericReadOnlyCollection.class);
+        assertThat(actualMap).isInstanceOf(GeneralReadOnlyCollection.class);
     }
 }
