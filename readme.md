@@ -1,8 +1,8 @@
 [![Continous Integration](https://github.com/sang-hyeon/Java-ReadOnlyCollections/actions/workflows/continous-integration.yml/badge.svg)](https://github.com/sang-hyeon/Java-ReadOnlyCollections/actions/workflows/continous-integration.yml)
 
-# ReadonlyCollections
-Java 언어는 컴파일 시점에서 평가되는 readonly 컬렉션류들을 지원하지 않습니다. <br>
-이 프로젝트는 컴파일 시점에서 평가되는 기본적인 readonly 컬렉션류들을 제공합니다.
+# ReadOnlyCollections
+Java (J2SE) does not support read-only collections that are evaluated at compile time. <br>
+This project provides it.
 
 # Supported Collections
 * [ReadOnlyCollection](lib/src/main/java/readonlycollections/ReadOnlyCollection.java)
@@ -12,7 +12,9 @@ Java 언어는 컴파일 시점에서 평가되는 readonly 컬렉션류들을 �
 
 # Quick Start
 ```java
-HashTable<String, String> source = new HashTable<String, String>();
 
-ReadOnlyMap<String, String> readonlySource = ReadOnly.to(source);
+var source = new ArrayList<String>();
+
+ReadOnlyList<String> readonlySource = ReadOnly.to(source);
+
 ```
