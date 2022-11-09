@@ -1,5 +1,7 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
+    id 'signing'
     id 'checkstyle'
     id 'org.ec4j.editorconfig' version '0.0.3'
     id "com.github.spotbugs" version "5.0.13"
@@ -56,10 +58,60 @@ jar {
         attributes(
             'Specification-Title': artifactName,
             'Specification-Version': artifactVersion,
-            'Specification-Vendor': 'io.github.readonlycollections',
+            'Specification-Vendor': 'io.github.sang-hyeon',
             'Implementation-Title': artifactName,
             'Implementation-Version': artifactVersion,
-            'Implementation-Vendor': 'io.github.readonlycollections'
+            'Implementation-Vendor': 'io.github.sang-hyeon'
         )
     }
+}
+
+publishing {
+    repositories {
+        maven {
+            name "OSSRH"
+            url "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username System.getenv("MAVEN_USER")
+                password System.getenv("MAVEN_PASSWORD")
+            }
+        }
+    }
+
+    publications {
+        maven(MavenPublication) {
+            artifactId artifactId
+            from components.java
+            pom {
+                name = artifactName
+                description = artifactDescription
+                url = "https://github.com/sang-hyeon/Java-ReadOnlyCollections"
+                licenses {
+                    license {
+                        name = "MIT License"
+                        url = "https://github.com/sang-hyeon/Java-ReadOnlyCollections/blob/main/LICENSE"
+                    }
+                }
+                developers {
+                    developer {
+                        id = "sanghyeon"
+                        name = "Sanghyeon kim"
+                        email = "thwj@me.com"
+                    }
+                }
+                scm {
+                    connection = "https://github.com/sang-hyeon/Java-ReadOnlyCollections.git"
+                    developerConnection = "https://github.com/sang-hyeon/Java-ReadOnlyCollections.git"
+                    url = "https://github.com/sang-hyeon/Java-ReadOnlyCollections"
+                }
+            }
+        }
+    }
+}
+
+signing {
+    def signingKey = System.getenv("SIGNING_KEY")
+    def signingPassword = System.getenv("SIGNING_PASSWORD")
+    useInMemoryPgpKeys(signingKey, signingPassword)
+    sign publishing.publications.maven
 }
