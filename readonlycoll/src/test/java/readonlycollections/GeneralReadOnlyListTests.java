@@ -27,6 +27,18 @@ public class GeneralReadOnlyListTests {
     }
 
     @Test
+    void can_not_get_a_value_if_given_index_is_out_of_bounds() {
+
+        var source = new ArrayList<String>();
+        var sut = new GeneralReadOnlyList<String>(source);
+
+        Runnable getting = () -> sut.get(100);
+
+        assertThatThrownBy(getting::run)
+            .isExactlyInstanceOf(IndexOutOfBoundsException.class);
+    }
+
+    @Test
     void convert_to_runtime_readonly_list() {
 
         var source = new ArrayList<String>();
