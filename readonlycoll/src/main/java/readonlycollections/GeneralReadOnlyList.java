@@ -11,6 +11,9 @@ class GeneralReadOnlyList<T>
         super(source);
     }
 
+    /**
+     * @throws java.lang.IndexOutOfBoundsException
+     */
     @Override
     public T get(int index) {
 
