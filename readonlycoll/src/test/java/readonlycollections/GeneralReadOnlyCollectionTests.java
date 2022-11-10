@@ -67,7 +67,7 @@ public class GeneralReadOnlyCollectionTests {
         var source = new ArrayList<String>();
         var sut = new GeneralReadOnlyCollection<String>(source);
 
-        Collection<String> actualRuntimeReadOnly = sut.toRuntimeReadOnly();
+        Collection<String> actualRuntimeReadOnly = sut.asRuntimeReadOnly();
 
         assertThatThrownBy(() -> actualRuntimeReadOnly.add("dummy"))
             .isExactlyInstanceOf(UnsupportedOperationException.class);

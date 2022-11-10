@@ -156,7 +156,7 @@ public class GeneralReadOnlyMapTests {
         var sut = new GeneralReadOnlyMap<String, String>(source);
 
         // Act
-        Map<String, String> actualRuntimeReadOnly = sut.toRuntimeReadOnly();
+        Map<String, String> actualRuntimeReadOnly = sut.asRuntimeReadOnly();
 
         // Assert
         assertThatThrownBy(() -> actualRuntimeReadOnly.put("a", "a"))
