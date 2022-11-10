@@ -27,12 +27,12 @@ ReadOnlyList<String> readonlySource = ReadOnly.of(source);
 <dependency>
   <groupId>io.github.sang-hyeon</groupId>
   <artifactId>readonlycoll</artifactId>
-  <version>0.1.2</version>
+  <version>0.1.4</version>
 </dependency>
 ```
 
 ### Gradle
 
 ```groovy
-implementation 'io.github.sang-hyeon:readonlycoll:0.1.2'
+implementation 'io.github.sang-hyeon:readonlycoll:0.1.4'
 ```
