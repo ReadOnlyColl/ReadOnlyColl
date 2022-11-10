@@ -12,6 +12,7 @@ class GeneralReadOnlyList<T>
     }
 
     /**
+     * get a value.
      * @throws java.lang.IndexOutOfBoundsException
      */
     @Override
