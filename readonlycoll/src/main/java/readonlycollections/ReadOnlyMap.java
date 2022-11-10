@@ -17,5 +17,5 @@ public interface ReadOnlyMap<K, V> {
 
     Optional<V> tryGetValue(K key);
 
-    Map<K, V> toRuntimeReadOnly();
+    Map<K, V> asRuntimeReadOnly();
 }

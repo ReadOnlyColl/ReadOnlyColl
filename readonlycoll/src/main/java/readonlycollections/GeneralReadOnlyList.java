@@ -19,7 +19,7 @@ class GeneralReadOnlyList<T>
     }
 
     @Override
-    public List<T> toRuntimeReadOnly() {
+    public List<T> asRuntimeReadOnly() {
 
         List<T> source = getSourceAsList();
         return Collections.unmodifiableList(source);

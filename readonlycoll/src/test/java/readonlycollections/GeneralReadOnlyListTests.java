@@ -33,7 +33,7 @@ public class GeneralReadOnlyListTests {
         source.add("a");
         var sut = new GeneralReadOnlyList<String>(source);
 
-        List<String> actualRuntimeReadOnly = sut.toRuntimeReadOnly();
+        List<String> actualRuntimeReadOnly = sut.asRuntimeReadOnly();
 
         assertThatThrownBy(() -> actualRuntimeReadOnly.add("dummy"))
             .isExactlyInstanceOf(UnsupportedOperationException.class);

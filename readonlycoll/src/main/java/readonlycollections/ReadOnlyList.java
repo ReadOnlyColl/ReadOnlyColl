@@ -6,5 +6,5 @@ public interface ReadOnlyList<T> extends ReadOnlyCollection<T> {
 
     T get(int index);
 
-    List<T> toRuntimeReadOnly();
+    List<T> asRuntimeReadOnly();
 }

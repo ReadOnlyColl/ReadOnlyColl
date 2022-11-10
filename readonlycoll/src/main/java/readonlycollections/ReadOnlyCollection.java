@@ -10,5 +10,5 @@ public interface ReadOnlyCollection<T> extends Iterable<T>, Streamable<T> {
 
     boolean contains(T value);
 
-    Collection<T> toRuntimeReadOnly();
+    Collection<T> asRuntimeReadOnly();
 }

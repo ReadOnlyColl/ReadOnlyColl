@@ -52,7 +52,7 @@ class GeneralReadOnlyMap<K, V> implements ReadOnlyMap<K, V> {
     }
 
     @Override
-    public Map<K, V> toRuntimeReadOnly() {
+    public Map<K, V> asRuntimeReadOnly() {
 
         return Collections.unmodifiableMap(source);
     }

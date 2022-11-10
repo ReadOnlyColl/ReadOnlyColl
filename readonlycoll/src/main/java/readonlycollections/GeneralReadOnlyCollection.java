@@ -51,7 +51,7 @@ class GeneralReadOnlyCollection<T> implements ReadOnlyCollection<T> {
     }
 
     @Override
-    public Collection<T> toRuntimeReadOnly() {
+    public Collection<T> asRuntimeReadOnly() {
 
         return Collections.unmodifiableCollection(this.source);
     }
