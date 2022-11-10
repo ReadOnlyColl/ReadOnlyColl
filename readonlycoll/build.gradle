@@ -109,6 +109,11 @@ publishing {
                         name = "Sanghyeon kim"
                         email = "thwj@me.com"
                     }
+                    developer {
+                        id = "abby"
+                        name = "Ahbyeol kim"
+                        email = "abbyinkr@gmail.com"
+                    }
                 }
                 scm {
                     connection = "https://github.com/sang-hyeon/Java-ReadOnlyCollections.git"
