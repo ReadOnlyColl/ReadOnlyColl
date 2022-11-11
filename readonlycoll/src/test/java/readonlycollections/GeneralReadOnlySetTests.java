@@ -1,7 +1,6 @@
-package readonlycollections.testtool;
+package readonlycollections;
 
 import org.junit.jupiter.api.Test;
-import readonlycollections.GeneralReadOnlySet;
 
 import java.util.HashSet;
 import java.util.Set;
