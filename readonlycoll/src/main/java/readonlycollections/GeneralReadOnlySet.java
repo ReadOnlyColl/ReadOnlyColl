@@ -5,13 +5,14 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.stream.Stream;
 
-public class GeneralReadOnlySet<T> implements ReadOnlySet<T> {
+public class GeneralReadOnlySet<T>
+    extends GeneralReadOnlyCollection<T> implements ReadOnlySet<T> {
 
-    private final Set<T> source;
+    //private final Set<T> source;
 
     public GeneralReadOnlySet(Set<T> source) {
 
-        this.source = source;
+        super(source);
     }
 
     @Override
@@ -35,6 +36,7 @@ public class GeneralReadOnlySet<T> implements ReadOnlySet<T> {
     @Override
     public Set<T> asRuntimeReadOnly() {
 
+        Set<T> source = getSourceAsSet();
         return Collections.unmodifiableSet(source);
     }
 
@@ -54,5 +56,10 @@ public class GeneralReadOnlySet<T> implements ReadOnlySet<T> {
     public Stream<T> parallelStream() {
 
         return this.source.parallelStream();
+    }
+
+    protected Set<T> getSourceAsSet() {
+
+        return (Set<T>) this.source;
     }
 }
