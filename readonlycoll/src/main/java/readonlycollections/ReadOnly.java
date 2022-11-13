@@ -3,6 +3,7 @@ package readonlycollections;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+import java.util.Queue;
 
 public class ReadOnly {
 
@@ -19,5 +20,10 @@ public class ReadOnly {
     public static <T> ReadOnlyList<T> of(List<T> source) {
 
         return new GeneralReadOnlyList<>(source);
+    }
+
+    public static <T> ReadOnlyQueue<T> of(Queue<T> source) {
+
+        return new GeneralReadOnlyQueue<>(source);
     }
 }

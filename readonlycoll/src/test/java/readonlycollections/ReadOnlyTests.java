@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.ArrayList;
 import java.util.Hashtable;
+import java.util.PriorityQueue;
 
 import org.junit.jupiter.api.Test;
 
@@ -46,5 +47,18 @@ public class ReadOnlyTests {
 
         // Assert
         assertThat(actualList).isInstanceOf(GeneralReadOnlyList.class);
+    }
+
+    @Test
+    void convert_to_readonly_of_queue() {
+
+        // Arrange
+        var source = new PriorityQueue<String>();
+
+        // Act
+        ReadOnlyQueue<String> actualQueue = ReadOnly.of(source);
+
+        // Assert
+        assertThat(actualQueue).isInstanceOf(GeneralReadOnlyQueue.class);
     }
 }
