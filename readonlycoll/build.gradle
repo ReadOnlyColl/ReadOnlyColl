@@ -9,7 +9,7 @@ plugins {
 
 sourceCompatibility = '17'
 compileJava.options.encoding = 'UTF-8'
-group = 'io.github.sang-hyeon'
+group = 'io.github.readonlycoll'
 version = artifactVersion
 
 repositories {
@@ -69,10 +69,10 @@ jar {
         attributes(
             'Specification-Title': artifactName,
             'Specification-Version': artifactVersion,
-            'Specification-Vendor': 'io.github.sang-hyeon',
+            'Specification-Vendor': 'io.github.readonlycoll',
             'Implementation-Title': artifactName,
             'Implementation-Version': artifactVersion,
-            'Implementation-Vendor': 'io.github.sang-hyeon'
+            'Implementation-Vendor': 'io.github.readonlycoll'
         )
     }
 }
@@ -96,11 +96,11 @@ publishing {
             pom {
                 name = artifactName
                 description = artifactDescription
-                url = "https://github.com/sang-hyeon/Java-ReadOnlyCollections"
+                url = "https://github.com/ReadOnlyColl/ReadOnlyColl"
                 licenses {
                     license {
                         name = "MIT License"
-                        url = "https://github.com/sang-hyeon/Java-ReadOnlyCollections/blob/main/LICENSE"
+                        url = "https://github.com/ReadOnlyColl/ReadOnlyColl/blob/main/LICENSE"
                     }
                 }
                 developers {
@@ -116,9 +116,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = "https://github.com/sang-hyeon/Java-ReadOnlyCollections.git"
-                    developerConnection = "https://github.com/sang-hyeon/Java-ReadOnlyCollections.git"
-                    url = "https://github.com/sang-hyeon/Java-ReadOnlyCollections"
+                    connection = "https://github.com/ReadOnlyColl/ReadOnlyColl.git"
+                    developerConnection = "https://github.com/ReadOnlyColl/ReadOnlyColl.git"
+                    url = "https://github.com/ReadOnlyColl/ReadOnlyColl"
                 }
             }
         }
