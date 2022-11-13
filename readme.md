@@ -8,7 +8,7 @@ This project provides it.
 * [ReadOnlyCollection](readonlycoll/src/main/java/readonlycollections/ReadOnlyCollection.java)
 * [ReadOnlyList](readonlycoll/src/main/java/readonlycollections/ReadOnlyList.java)
 * [ReadOnlyMap](readonlycoll/src/main/java/readonlycollections/ReadOnlyMap.java)
-* (Coming soon...)
+* [ReadOnlyQueue](readonlycoll/src/main/java/readonlycollections/ReadOnlyQueue.java)
 
 ## Quick Start
 ```java
