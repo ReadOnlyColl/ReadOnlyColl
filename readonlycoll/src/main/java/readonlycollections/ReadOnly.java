@@ -4,6 +4,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.Queue;
+import java.util.Set;
 
 public class ReadOnly {
 
@@ -25,5 +26,10 @@ public class ReadOnly {
     public static <T> ReadOnlyQueue<T> of(Queue<T> source) {
 
         return new GeneralReadOnlyQueue<>(source);
+    }
+
+    public static <T> ReadOnlySet<T> of(Set<T> source) {
+
+        return new GeneralReadOnlySet<>(source);
     }
 }
