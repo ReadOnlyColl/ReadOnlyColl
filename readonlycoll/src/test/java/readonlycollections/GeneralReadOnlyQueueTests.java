@@ -40,7 +40,7 @@ public class GeneralReadOnlyQueueTests {
     }
 
     @Test
-    void try_to_get_value_if_source_has_next_value() {
+    void try_to_dequeue_a_value_if_source_has_next_value() {
 
         var expectedValue = "a";
         var source = new PriorityQueue<String>();
@@ -56,7 +56,7 @@ public class GeneralReadOnlyQueueTests {
     }
 
     @Test
-    void try_to_get_empty_if_source_dosent_have_next_value() {
+    void try_to_deueue_a_empty_if_source_dosent_have_next_value() {
 
         var source = new PriorityQueue<String>();
         var sut = new GeneralReadOnlyQueue<String>(source);
