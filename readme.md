@@ -1,4 +1,4 @@
-[![Continous Integration](https://github.com/sang-hyeon/Java-ReadOnlyCollections/actions/workflows/continous-integration.yml/badge.svg)](https://github.com/sang-hyeon/Java-ReadOnlyCollections/actions/workflows/continous-integration.yml)
+[![Continous Integration](https://github.com/ReadOnlyColl/ReadOnlyColl/actions/workflows/continous-integration.yml/badge.svg)](https://github.com/ReadOnlyColl/ReadOnlyColl/actions/workflows/continous-integration.yml)
 
 # ReadOnlyCollections
 Java (J2SE) does not support read-only collections that are evaluated at compile time. <br>
@@ -25,7 +25,7 @@ ReadOnlyList<String> readonlySource = ReadOnly.of(source);
 
 ```xml
 <dependency>
-  <groupId>io.github.sang-hyeon</groupId>
+  <groupId>io.github.readonlycoll</groupId>
   <artifactId>readonlycoll</artifactId>
   <version>0.1.4</version>
 </dependency>
@@ -34,5 +34,5 @@ ReadOnlyList<String> readonlySource = ReadOnly.of(source);
 ### Gradle
 
 ```groovy
-implementation 'io.github.sang-hyeon:readonlycoll:0.1.4'
+implementation 'io.github.readonlycoll:readonlycoll:0.1.4'
 ```
