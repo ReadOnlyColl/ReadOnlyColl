@@ -1,11 +1,18 @@
 package readonlycollections;
 
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 public interface ReadOnlyQueue<T> extends ReadOnlyCollection<T> {
 
-    T dequeue() throws NoSuchElementException;
+    /**
+     * Dequeue.
+     *
+     * @return value
+     *
+     * @throws java.util.NoSuchElementException
+     *
+     */
+    T dequeue();
 
     Optional<T> tryDequeue();
 }

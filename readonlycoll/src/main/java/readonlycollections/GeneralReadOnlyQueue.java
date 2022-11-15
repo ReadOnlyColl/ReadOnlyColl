@@ -13,7 +13,7 @@ class GeneralReadOnlyQueue<T>
     }
 
     @Override
-    public T dequeue() throws NoSuchElementException {
+    public T dequeue() {
 
         Queue<T> source = getSourceAsQueue();
         return source.remove();
