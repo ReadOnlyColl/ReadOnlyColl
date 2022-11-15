@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.Set;
 
-public class ReadOnly {
+public final class ReadOnly {
 
     public static <K, V> ReadOnlyMap<K, V> of(Map<K, V> source) {
 

@@ -6,7 +6,9 @@ public interface ReadOnlyList<T> extends ReadOnlyCollection<T> {
 
     /**
      * get a value.
+     *
      * @throws java.lang.IndexOutOfBoundsException
+     *
      */
     T get(int index);
 

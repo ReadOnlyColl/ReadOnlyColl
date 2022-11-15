@@ -13,6 +13,7 @@ class GeneralReadOnlyList<T>
 
     /**
      * get a value.
+     *
      * @throws java.lang.IndexOutOfBoundsException
      */
     @Override
@@ -29,7 +30,7 @@ class GeneralReadOnlyList<T>
         return Collections.unmodifiableList(source);
     }
 
-    protected List<T> getSourceAsList() {
+    protected final List<T> getSourceAsList() {
 
         return (List<T>) this.source;
     }
