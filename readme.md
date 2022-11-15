@@ -8,6 +8,7 @@ This project provides it.
 * [ReadOnlyCollection](readonlycoll/src/main/java/readonlycollections/ReadOnlyCollection.java)
 * [ReadOnlyList](readonlycoll/src/main/java/readonlycollections/ReadOnlyList.java)
 * [ReadOnlyMap](readonlycoll/src/main/java/readonlycollections/ReadOnlyMap.java)
+* [ReadOnlyQueue](readonlycoll/src/main/java/readonlycollections/ReadOnlyQueue.java)
 * [ReadOnlySet](readonlycoll/src/main/java/readonlycollections/ReadOnlySet.java)
 
 ## Quick Start
