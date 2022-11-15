@@ -2,12 +2,10 @@ package readonlycollections;
 
 import java.util.Map;
 import java.util.Optional;
-import java.util.Set;
 
 public interface ReadOnlyMap<K, V> {
 
-    // TODO: replace to ReadOnlySet
-    Set<K> keySet();
+    ReadOnlySet<K> keySet();
 
     ReadOnlyCollection<V> values();
 

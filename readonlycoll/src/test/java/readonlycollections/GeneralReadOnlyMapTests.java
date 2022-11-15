@@ -27,10 +27,10 @@ public class GeneralReadOnlyMapTests {
         var sut = new GeneralReadOnlyMap<String, String>(source);
 
         // Act
-        Set<String> actualKeys = sut.keySet();
+        ReadOnlySet<String> actualKeys = sut.keySet();
 
         // Assert
-        assertThat(actualKeys).isEqualTo(expectedKeys);
+        assertThat(actualKeys.asRuntimeReadOnly()).isEqualTo(expectedKeys);
     }
 
     @Test

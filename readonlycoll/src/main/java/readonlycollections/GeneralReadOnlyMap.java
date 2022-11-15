@@ -3,7 +3,6 @@ package readonlycollections;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Optional;
-import java.util.Set;
 
 class GeneralReadOnlyMap<K, V> implements ReadOnlyMap<K, V> {
 
@@ -15,9 +14,9 @@ class GeneralReadOnlyMap<K, V> implements ReadOnlyMap<K, V> {
     }
 
     @Override
-    public Set<K> keySet() {
+    public ReadOnlySet<K> keySet() {
 
-        return this.source.keySet();
+        return ReadOnly.of(this.source.keySet());
     }
 
     @Override
